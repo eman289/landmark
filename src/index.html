@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-14 md:scroll-pt-5">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Landmark</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=NTR&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/all.min.css" />
+		<link rel="stylesheet" href="../dist/output.css" />
+	</head>
+	<body class="antialiased dark:bg-primary">
+		<header
+			id="navbar"
+			class="fixed top-0 left-0 z-50 w-full flex justify-between items-center px-10 py-4 text-white bg-transparent transition-colors duration-300 ease-in-out dark:bg-transparent dark:text-white"
+		>
+			<!-- Logo -->
+			<a href="#" title="landmark" class="flex justify-center items-center gap-2">
+				<img src="./images/logo.png" class="w-10" alt="logo" />
+				<span class="md:text-xl font-semibold mb-3">
+					Landmark<span class="text-purple-500 text-4xl mb-2">.</span>
+				</span>
+			</a>
+
+			<div class="flex gap-2">
+				<!--Mode button-->
+				<button
+					type="button"
+					id="modeToggle"
+					class="p-2 rounded-md text-inherit focus:outline-none hover:text-purple-400"
+					title="Mode"
+				>
+					<i id="modeIcon" class="fa-solid fa-moon text-xl md:text-2xl"></i>
+				</button>
+
+				<!-- Toggle Button for Mobile -->
+				<button
+					type="button"
+					title="menu"
+					id="navbar-toggle"
+					class="md:hidden p-2 rounded-md text-purple-300 focus:outline-none focus:text-purple-400 hover:text-purple-400 hover:scale-110 transition-all duration-300 ease-in-out"
+					aria-controls="navbar-menu"
+					aria-expanded="false"
+				>
+					<svg
+						class="w-6 h-6"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"
+						/>
+					</svg>
+				</button>
+
+				<!-- Navigation Links -->
+				<nav
+					id="navbar-menu"
+					class="hidden p-4 md:flex items-center text-center gap-3 text-sm md:text-base mt-4 md:mt-0 md:gap-4 md:bg-transparent bg-white dark:bg-primary md:dark:bg-inherit dark:text-white md:static absolute z-45 top-14 right-10 w-1/2 md:w-auto md:p-0 rounded-lg shadow-md md:shadow-none"
+				>
+					<a
+						href="#home"
+						class="block py-2 px-3 md:p-0 text-main md:text-inherit dark:text-white hover:text-white hover:bg-purple-500 rounded md:hover:bg-transparent md:hover:text-purple-500"
+						>Home</a
+					>
+					<a
+						href="#features"
+						class="block py-2 px-3 md:p-0 text-main md:text-inherit dark:text-white hover:text-white hover:bg-purple-500 rounded md:hover:bg-transparent md:hover:text-purple-500"
+						>Features</a
+					>
+					<a
+						href="#pricing"
+						class="block py-2 px-3 md:p-0 text-main md:text-inherit dark:text-white hover:text-white hover:bg-purple-500 rounded md:hover:bg-transparent md:hover:text-purple-500"
+						>Pricing</a
+					>
+					<a
+						href="#testimonials"
+						class="block py-2 px-3 md:p-0 text-main md:text-inherit dark:text-white hover:text-white hover:bg-purple-500 rounded md:hover:bg-transparent md:hover:text-purple-500"
+						>Testimonials</a
+					>
+					<div class="sign md:flex items-center gap-3 md:mt-0">
+						<a
+							href="#"
+							class="block py-2 px-3 text-main dark:text-white hover:text-white hover:bg-purple-500 rounded md:bg-gradient-to-t md:from-purple-900 md:via-purple-700 md:to-teal-200 md:text-white md:font-medium md:rounded-lg md:transition-all md:duration-500 md:ease-in-out md:hover:shadow-md md:hover:shadow-teal-200/50"
+							>Login</a
+						>
+						<a
+							href="#"
+							class="block py-2 px-3 text-main dark:text-white hover:text-white hover:bg-purple-500 rounded md:bg-gradient-to-t md:from-purple-900 md:via-purple-700 md:to-teal-200 md:text-white md:font-medium md:rounded-lg md:transition-all md:duration-500 md:ease-in-out md:hover:shadow-md md:hover:shadow-teal-200/50"
+							>Get Started</a
+						>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<section
+			id="home"
+			class="relative flex justify-center items-center bg-hero h-screen bg-cover bg-center"
+		>
+			<div class="absolute inset-0 bg-black opacity-65 z-10"></div>
+			<div class="flex justify-center items-center text-center">
+				<div class="relative z-20 px-4 pb-11 md:pt-20 md:pb-0">
+					<div class="flex flex-col gap-4 items-center justify-center">
+						<h1
+							class="mx-auto text-4xl leading-snug md:text-6xl md:mb-5 text-white font-extrabold"
+						>
+							<span id="typewriter"></span>
+							<span class="inline-block w-0.5 h-8 md:h-12 bg-white animate-blink"></span>
+						</h1>
+						<p
+							class="max-w-lg mx-auto mb-5 text-teal-200 text-sm md:text-base text-pretty tracking-wide"
+						>
+							Are you ready to start your adventure and start building the next greatest SAAS app
+							on the market?
+						</p>
+						<a
+							href="#"
+							class="bg-gradient-to-t from-purple-900 via-purple-700 to-teal-200 text-white font-medium rounded-lg px-4 py-3 text-sm md:text-base md:px-7 md:py-4 transition-all duration-500 ease-in-out hover:shadow-md hover:shadow-teal-200/50"
+						>
+							Signup Today!
+						</a>
+					</div>
+					<div class="mt-8">
+						<p class="text-sm font-medium tracking-widest text-gray-400 uppercase">
+							integrates with
+						</p>
+						<div class="flex items-center justify-center gap-2">
+							<svg
+								class="h-16 text-gray-400 fill-current hover:text-gray-500 duration-150 cursor-pointer"
+								viewBox="0 0 32 32"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M8.25 10.435l-2.165 0.46-0.010 7.12c0 1.315 0.99 2.165 2.305 2.165 0.73 0 1.265-0.135 1.56-0.295v-1.69c-0.285 0.115-1.685 0.525-1.685-0.785v-3.16h1.685v-1.89h-1.685zM12.705 13.015l-0.135-0.655h-1.92v7.66h2.215v-5.155c0.525-0.69 1.41-0.555 1.695-0.465v-2.040c-0.3-0.105-1.335-0.3-1.855 0.655zM17.32 9.4l-2.23 0.475v1.81l2.23-0.475zM2.245 14.615c0-0.345 0.29-0.48 0.755-0.485 0.675 0 1.535 0.205 2.21 0.57v-2.090c-0.735-0.29-1.47-0.405-2.205-0.405-1.8 0-3 0.94-3 2.51 0 2.46 3.375 2.060 3.375 3.12 0 0.41-0.355 0.545-0.85 0.545-0.735 0-1.685-0.305-2.43-0.71v2c0.825 0.355 1.66 0.505 2.425 0.505 1.845 0 3.115-0.79 3.115-2.39 0-2.645-3.395-2.17-3.395-3.17zM32 16.28c0-2.275-1.1-4.070-3.21-4.070s-3.395 1.795-3.395 4.055c0 2.675 1.515 3.91 3.675 3.91 1.060 0 1.855-0.24 2.46-0.575v-1.67c-0.605 0.305-1.3 0.49-2.18 0.49-0.865 0-1.625-0.305-1.725-1.345h4.345c0.010-0.115 0.030-0.58 0.030-0.795zM27.605 15.44c0-1 0.615-1.42 1.17-1.42 0.545 0 1.125 0.42 1.125 1.42zM21.96 12.21c-0.87 0-1.43 0.41-1.74 0.695l-0.115-0.55h-1.955v10.24l2.22-0.47 0.005-2.51c0.32 0.235 0.795 0.56 1.57 0.56 1.59 0 3.040-1.16 3.040-3.98 0.005-2.58-1.465-3.985-3.025-3.985zM21.43 18.335c-0.52 0-0.83-0.19-1.045-0.42l-0.015-3.3c0.23-0.255 0.55-0.44 1.060-0.44 0.81 0 1.37 0.91 1.37 2.070 0.005 1.195-0.545 2.090-1.37 2.090zM15.095 20.020h2.23v-7.66h-2.23z"
+								/>
+							</svg>
+							<svg
+								class="h-8 text-gray-400 fill-current hover:text-gray-500 duration-150 cursor-pointer"
+								viewBox="0 0 20 20"
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+							>
+								<title>github</title>
+								<desc>Created with Sketch.</desc>
+								<defs></defs>
+								<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<g
+										id="Dribbble-Light-Preview"
+										transform="translate(-140.000000, -7559.000000)"
+										fill="currentColor"
+									>
+										<g id="icons" transform="translate(56.000000, 160.000000)">
+											<path
+												d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+												id="github-[#142]"
+											></path>
+										</g>
+									</g>
+								</g>
+							</svg>
+							<svg
+								class="h-8 text-gray-400 fill-current hover:text-gray-500 duration-150 cursor-pointer"
+								viewBox="0 -1.5 20 20"
+								version="1.1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+							>
+								<title>vimeo</title>
+								<desc>Created with Sketch.</desc>
+								<defs></defs>
+								<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<g
+										id="Dribbble-Light-Preview"
+										transform="translate(-60.000000, -7560.000000)"
+										fill="currentColor"
+									>
+										<g id="icons" transform="translate(56.000000, 160.000000)">
+											<path
+												d="M23.99,7403.93262 C23.9,7405.8454 22.541,7408.46538 19.911,7411.79058 C17.192,7415.26353 14.891,7417 13.009,7417 C11.843,7417 10.857,7415.94019 10.051,7413.82155 L8.437,7407.99457 C7.839,7405.87495 7.197,7404.81514 6.51,7404.81514 C6.36,7404.81514 5.837,7405.12441 4.941,7405.74296 L4,7404.55117 C4.986,7403.69722 5.957,7402.84326 6.913,7401.99029 C8.228,7400.87138 9.214,7400.28337 9.871,7400.22427 C11.425,7400.07751 12.381,7401.12156 12.74,7403.35839 C13.128,7405.77251 13.397,7407.2726 13.547,7407.8616 C13.995,7409.86303 14.488,7410.86374 15.026,7410.86374 C15.444,7410.86374 16.072,7410.21662 16.908,7408.92141 C17.745,7407.6262 18.193,7406.64026 18.253,7405.96359 C18.372,7404.84469 17.924,7404.28622 16.908,7404.28622 C16.43,7404.28622 15.937,7404.38865 15.429,7404.59451 C16.415,7401.44561 18.298,7399.91499 21.077,7400.00364 C23.138,7400.06274 24.11,7401.37174 23.99,7403.93262 L23.99,7403.93262 Z"
+												id="vimeo-[#144]"
+											></path>
+										</g>
+									</g>
+								</g>
+							</svg>
+							<svg
+								class="h-8 text-gray-400 fill-current hover:text-gray-500 duration-150 cursor-pointer"
+								viewBox="0 0 16 16"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+							>
+								<g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+									<path
+										d="M2.471 11.318a1.474 1.474 0 001.47-1.471v-1.47h-1.47A1.474 1.474 0 001 9.846c.001.811.659 1.469 1.47 1.47zm3.682-2.942a1.474 1.474 0 00-1.47 1.471v3.683c.002.811.659 1.468 1.47 1.47a1.474 1.474 0 001.47-1.47V9.846a1.474 1.474 0 00-1.47-1.47zM4.683 2.471c.001.811.659 1.469 1.47 1.47h1.47v-1.47A1.474 1.474 0 006.154 1a1.474 1.474 0 00-1.47 1.47zm2.94 3.682a1.474 1.474 0 00-1.47-1.47H2.47A1.474 1.474 0 001 6.153c.002.812.66 1.469 1.47 1.47h3.684a1.474 1.474 0 001.47-1.47zM9.847 7.624a1.474 1.474 0 001.47-1.47V2.47A1.474 1.474 0 009.848 1a1.474 1.474 0 00-1.47 1.47v3.684c.002.81.659 1.468 1.47 1.47zm3.682-2.941a1.474 1.474 0 00-1.47 1.47v1.47h1.47A1.474 1.474 0 0015 6.154a1.474 1.474 0 00-1.47-1.47zM8.377 9.847c.002.811.659 1.469 1.47 1.47h3.683A1.474 1.474 0 0015 9.848a1.474 1.474 0 00-1.47-1.47H9.847a1.474 1.474 0 00-1.47 1.47zm2.94 3.682a1.474 1.474 0 00-1.47-1.47h-1.47v1.47c.002.812.659 1.469 1.47 1.47a1.474 1.474 0 001.47-1.47z"
+									/>
+								</g>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="absolute w-full z-20 bottom-0 right-0 md:hidden">
+				<!-- Light Mode SVG -->
+				<svg
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					class="w-full h-full dark:hidden"
+					id="wave-light"
+					style="transform: rotate(0deg); transition: 0.3s"
+					viewBox="0 0 1440 490"
+					version="1.1"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<defs>
+						<linearGradient id="sw-gradient-0-light" x1="0" x2="0" y1="1" y2="0">
+							<stop stop-color="rgba(255, 255, 255, 1)" offset="0%" />
+							<stop stop-color="rgba(255, 255, 255, 1)" offset="100%" />
+						</linearGradient>
+					</defs>
+					<path
+						style="transform: translate(0, 0px); opacity: 1"
+						fill="url(#sw-gradient-0-light)"
+						d="M0,147L26.7,147C53.3,147,107,147,160,187.8C213.3,229,267,310,320,302.2C373.3,294,427,196,480,204.2C533.3,212,587,327,640,334.8C693.3,343,747,245,800,228.7C853.3,212,907,278,960,326.7C1013.3,376,1067,408,1120,383.8C1173.3,359,1227,278,1280,253.2C1333.3,229,1387,261,1440,245C1493.3,229,1547,163,1600,187.8C1653.3,212,1707,327,1760,343C1813.3,359,1867,278,1920,220.5C1973.3,163,2027,131,2080,163.3C2133.3,196,2187,294,2240,343C2293.3,392,2347,392,2400,326.7C2453.3,261,2507,131,2560,130.7C2613.3,131,2667,261,2720,269.5C2773.3,278,2827,163,2880,130.7C2933.3,98,2987,147,3040,196C3093.3,245,3147,294,3200,285.8C3253.3,278,3307,212,3360,204.2C3413.3,196,3467,245,3520,269.5C3573.3,294,3627,294,3680,302.2C3733.3,310,3787,327,3813,334.8L3840,343L3840,490L3813.3,490C3786.7,490,3733,490,3680,490C3626.7,490,3573,490,3520,490C3466.7,490,3413,490,3360,490C3306.7,490,3253,490,3200,490C3146.7,490,3093,490,3040,490C2986.7,490,2933,490,2880,490C2826.7,490,2773,490,2720,490C2666.7,490,2613,490,2560,490C2506.7,490,2453,490,2400,490C2346.7,490,2293,490,2240,490C2186.7,490,2133,490,2080,490C2026.7,490,1973,490,1920,490C1866.7,490,1813,490,1760,490C1706.7,490,1653,490,1600,490C1546.7,490,1493,490,1440,490C1386.7,490,1333,490,1280,490C1226.7,490,1173,490,1120,490C1066.7,490,1013,490,960,490C906.7,490,853,490,800,490C746.7,490,693,490,640,490C586.7,490,533,490,480,490C426.7,490,373,490,320,490C266.7,490,213,490,160,490C106.7,490,53,490,27,490L0,490Z"
+					/>
+				</svg>
+
+				<!-- Dark Mode SVG -->
+				<svg
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					class="w-full h-full hidden dark:block"
+					id="wave-dark"
+					style="transform: rotate(0deg); transition: 0.3s"
+					viewBox="0 0 1440 490"
+					version="1.1"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<defs>
+						<linearGradient id="sw-gradient-0-dark" x1="0" x2="0" y1="1" y2="0">
+							<stop stop-color="rgb(18, 0, 26)" offset="0%" />
+							<stop stop-color="rgb(18, 0, 26)" offset="100%" />
+						</linearGradient>
+					</defs>
+					<path
+						style="transform: translate(0, 0px); opacity: 1"
+						fill="url(#sw-gradient-0-dark)"
+						d="M0,147L26.7,147C53.3,147,107,147,160,187.8C213.3,229,267,310,320,302.2C373.3,294,427,196,480,204.2C533.3,212,587,327,640,334.8C693.3,343,747,245,800,228.7C853.3,212,907,278,960,326.7C1013.3,376,1067,408,1120,383.8C1173.3,359,1227,278,1280,253.2C1333.3,229,1387,261,1440,245C1493.3,229,1547,163,1600,187.8C1653.3,212,1707,327,1760,343C1813.3,359,1867,278,1920,220.5C1973.3,163,2027,131,2080,163.3C2133.3,196,2187,294,2240,343C2293.3,392,2347,392,2400,326.7C2453.3,261,2507,131,2560,130.7C2613.3,131,2667,261,2720,269.5C2773.3,278,2827,163,2880,130.7C2933.3,98,2987,147,3040,196C3093.3,245,3147,294,3200,285.8C3253.3,278,3307,212,3360,204.2C3413.3,196,3467,245,3520,269.5C3573.3,294,3627,294,3680,302.2C3733.3,310,3787,327,3813,334.8L3840,343L3840,490L3813.3,490C3786.7,490,3733,490,3680,490C3626.7,490,3573,490,3520,490C3466.7,490,3413,490,3360,490C3306.7,490,3253,490,3200,490C3146.7,490,3093,490,3040,490C2986.7,490,2933,490,2880,490C2826.7,490,2773,490,2720,490C2666.7,490,2613,490,2560,490C2506.7,490,2453,490,2400,490C2346.7,490,2293,490,2240,490C2186.7,490,2133,490,2080,490C2026.7,490,1973,490,1920,490C1866.7,490,1813,490,1760,490C1706.7,490,1653,490,1600,490C1546.7,490,1493,490,1440,490C1386.7,490,1333,490,1280,490C1226.7,490,1173,490,1120,490C1066.7,490,1013,490,960,490C906.7,490,853,490,800,490C746.7,490,693,490,640,490C586.7,490,533,490,480,490C426.7,490,373,490,320,490C266.7,490,213,490,160,490C106.7,490,53,490,27,490L0,490Z"
+					/>
+				</svg>
+			</div>
+		</section>
+
+		<section id="features">
+			<div class="container mx-auto py-14 md:py-28">
+				<div class="text-center">
+					<h2 class="text-xl md:text-2xl mb-2 tracking-wide text-purple-700">Our Features</h2>
+					<h3
+						class="max-w-2xl mx-auto px-10 text-4xl md:text-6xl font-extrabold text-main dark:text-white mb-10"
+					>
+						Built and Designed with you in Mind
+					</h3>
+				</div>
+				<div class="flex flex-col lg:flex-row justify-center items-center text-center">
+					<div class="max-w-md py-10 lg:w-1/3">
+						<div class="flex flex-col items-center gap-2">
+							<svg
+								class="relative w-20 h-20"
+								viewBox="0 0 58 58"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+							>
+								<defs>
+									<linearGradient
+										x1="0%"
+										y1="0%"
+										x2="100%"
+										y2="100%"
+										id="linearGradient-1TriangleIcon1"
+									>
+										<stop stop-color="#9C09DB" offset="0%" />
+										<stop stop-color="#1C0FD7" offset="100%" />
+									</linearGradient>
+									<filter
+										x="-14%"
+										y="-10%"
+										width="128%"
+										height="128%"
+										filterUnits="objectBoundingBox"
+										id="filter-3TriangleIcon1"
+									>
+										<feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1" />
+										<feGaussianBlur
+											stdDeviation="2"
+											in="shadowOffsetOuter1"
+											result="shadowBlurOuter1"
+										/>
+										<feColorMatrix
+											values="0 0 0 0 0.141176471 0 0 0 0 0.031372549 0 0 0 0 0.501960784 0 0 0 0.15 0"
+											in="shadowBlurOuter1"
+										/>
+									</filter>
+									<path
+										d="M17.947 0h14.106c6.24 0 8.503.65 10.785 1.87a12.721 12.721 0 015.292 5.292C49.35 9.444 50 11.707 50 17.947v14.106c0 6.24-.65 8.503-1.87 10.785a12.721 12.721 0 01-5.292 5.292C40.556 49.35 38.293 50 32.053 50H17.947c-6.24 0-8.503-.65-10.785-1.87a12.721 12.721 0 01-5.292-5.292C.65 40.556 0 38.293 0 32.053V17.947c0-6.24.65-8.503 1.87-10.785A12.721 12.721 0 017.162 1.87C9.444.65 11.707 0 17.947 0z"
+										id="path-2TriangleIcon1"
+									/>
+								</defs>
+								<g
+									id="Page-1TriangleIcon1"
+									stroke="none"
+									stroke-width="1"
+									fill="none"
+									fill-rule="evenodd"
+								>
+									<g id="Desktop-HDTriangleIcon1" transform="translate(-291 -1278)">
+										<g id="FeaturesTriangleIcon1" transform="translate(170 915)">
+											<g id="Group-9TriangleIcon1" transform="translate(0 365)">
+												<g id="Group-8TriangleIcon1" transform="translate(125)">
+													<g id="Rectangle-9TriangleIcon1">
+														<use
+															fill="#000"
+															filter="url(#filter-3TriangleIcon1)"
+															xlink:href="#path-2TriangleIcon1"
+														/>
+														<use
+															fill="url(#linearGradient-1TriangleIcon1)"
+															xlink:href="#path-2TriangleIcon1"
+														/>
+													</g>
+													<g
+														id="playTriangleIcon1"
+														transform="translate(18 15)"
+														fill="#FFF"
+														fill-rule="nonzero"
+													>
+														<path
+															d="M9.432 2.023l8.919 14.879a1.05 1.05 0 01-.384 1.452 1.097 1.097 0 01-.548.146H-.42A1.07 1.07 0 01-1.5 17.44c0-.19.052-.375.15-.538L7.567 2.023a1.092 1.092 0 011.864 0z"
+															id="TriangleIcon1"
+															transform="rotate(90 8.5 10)"
+														/>
+													</g>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</svg>
+							<h4 class="font-bold text-lg dark:text-purple-100">Automated Tools</h4>
+							<p class="text-gray-500 dark:text-gray-300 text-base max-w-64">
+								Automate your workflow with these top of the line marketing tools.
+							</p>
+							<a class="underline text-main dark:text-white font-medium" href="#">Learn more</a>
+						</div>
+					</div>
+					<div class="max-w-md py-10 lg:w-1/3">
+						<div class="flex flex-col items-center gap-2">
+							<svg
+								class="relative w-20 h-20"
+								viewBox="0 0 58 58"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+							>
+								<defs>
+									<linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1Icon2">
+										<stop stop-color="#F2C314" offset="0%" />
+										<stop stop-color="#FC3832" offset="100%" />
+									</linearGradient>
+									<filter
+										x="-14%"
+										y="-10%"
+										width="128%"
+										height="128%"
+										filterUnits="objectBoundingBox"
+										id="filter-3Icon2"
+									>
+										<feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1" />
+										<feGaussianBlur
+											stdDeviation="2"
+											in="shadowOffsetOuter1"
+											result="shadowBlurOuter1"
+										/>
+										<feColorMatrix
+											values="0 0 0 0 0.501960784 0 0 0 0 0.125490196 0 0 0 0 0 0 0 0 0.15 0"
+											in="shadowBlurOuter1"
+										/>
+									</filter>
+									<path
+										d="M17.947 0h14.106c6.24 0 8.503.65 10.785 1.87a12.721 12.721 0 015.292 5.292C49.35 9.444 50 11.707 50 17.947v14.106c0 6.24-.65 8.503-1.87 10.785a12.721 12.721 0 01-5.292 5.292C40.556 49.35 38.293 50 32.053 50H17.947c-6.24 0-8.503-.65-10.785-1.87a12.721 12.721 0 01-5.292-5.292C.65 40.556 0 38.293 0 32.053V17.947c0-6.24.65-8.503 1.87-10.785A12.721 12.721 0 017.162 1.87C9.444.65 11.707 0 17.947 0z"
+										id="path-2Icon2"
+									/>
+								</defs>
+								<g
+									id="Page-1Icon2"
+									stroke="none"
+									stroke-width="1"
+									fill="none"
+									fill-rule="evenodd"
+								>
+									<g id="Desktop-HDIcon2" transform="translate(-691 -1278)">
+										<g id="FeaturesIcon2" transform="translate(170 915)">
+											<g id="Group-9-CopyIcon2" transform="translate(400 365)">
+												<g id="Group-8Icon2" transform="translate(125)">
+													<g id="Rectangle-9Icon2">
+														<use fill="#000" filter="url(#filter-3Icon2)" xlink:href="#path-2Icon2" />
+														<use fill="url(#linearGradient-1Icon2)" xlink:href="#path-2Icon2" />
+													</g>
+													<g
+														id="machine-learningIcon2"
+														transform="translate(14 12)"
+														fill="#FFF"
+														fill-rule="nonzero"
+													>
+														<path
+															d="M10.554 21.418v-2.68c-1.1-.204-1.932-1.143-1.932-2.271 0-.468.143-.903.388-1.267l-2.32-1.662L4.367 15.2a2.254 2.254 0 01-.005 2.541l5.28 4.05c.268-.182.577-.311.911-.373zm.892 0c.334.062.643.191.912.373l5.28-4.05a2.254 2.254 0 01-.006-2.54l-2.321-1.663L12.99 15.2c.245.364.388.8.388 1.267 0 1.128-.832 2.067-1.932 2.27v2.681zm1.538.997c.25.365.394.803.394 1.274C13.378 24.965 12.314 26 11 26s-2.378-1.035-2.378-2.311c0-.471.145-.91.394-1.274l-5.28-4.05c-.385.26-.853.413-1.358.413C1.065 18.778 0 17.743 0 16.467c0-1.129.832-2.068 1.932-2.27v-2.393C.832 11.6 0 10.662 0 9.534c0-1.277 1.065-2.312 2.378-2.312.505 0 .973.153 1.358.414l5.28-4.05a2.254 2.254 0 01-.394-1.275C8.622 1.035 9.686 0 11 0s2.378 1.035 2.378 2.311c0 .471-.145.91-.394 1.274l5.28 4.05c.385-.26.853-.413 1.358-.413C20.935 7.222 22 8.257 22 9.533c0 1.129-.832 2.068-1.932 2.27v2.393c1.1.203 1.932 1.142 1.932 2.27 0 1.277-1.065 2.312-2.378 2.312-.505 0-.973-.153-1.358-.414l-5.28 4.05zm-9.243-7.843L5.937 13l-2.196-1.572c-.27.183-.58.314-.917.376v2.392c.336.062.647.193.917.376zm.627-3.772l2.321 1.662L9.01 10.8a2.254 2.254 0 01-.388-1.267c0-1.128.832-2.067 1.932-2.27V4.582a2.403 2.403 0 01-.912-.373l-5.28 4.05a2.254 2.254 0 01.006 2.54zm13.89 3.772c.27-.183.582-.314.918-.376v-2.392a2.403 2.403 0 01-.917-.376L16.063 13l2.196 1.572zm-.62-6.313l-5.28-4.05a2.403 2.403 0 01-.912.373v2.68c1.1.204 1.932 1.143 1.932 2.271 0 .468-.143.903-.388 1.267l2.32 1.662 2.322-1.662a2.254 2.254 0 01.005-2.541zm-8 6.313A2.415 2.415 0 0111 14.156c.507 0 .977.154 1.363.416L14.559 13l-2.196-1.572a2.415 2.415 0 01-1.363.416c-.507 0-.977-.154-1.363-.416L7.441 13l2.196 1.572zM11 10.978c.821 0 1.486-.647 1.486-1.445 0-.797-.665-1.444-1.486-1.444s-1.486.647-1.486 1.444c0 .798.665 1.445 1.486 1.445zm0 6.933c.821 0 1.486-.647 1.486-1.444 0-.798-.665-1.445-1.486-1.445s-1.486.647-1.486 1.445c0 .797.665 1.444 1.486 1.444zm8.622-6.933c.82 0 1.486-.647 1.486-1.445 0-.797-.665-1.444-1.486-1.444s-1.487.647-1.487 1.444c0 .798.666 1.445 1.487 1.445zm0 6.933c.82 0 1.486-.647 1.486-1.444 0-.798-.665-1.445-1.486-1.445s-1.487.647-1.487 1.445c0 .797.666 1.444 1.487 1.444zM2.378 10.978c.821 0 1.487-.647 1.487-1.445 0-.797-.666-1.444-1.487-1.444-.82 0-1.486.647-1.486 1.444 0 .798.665 1.445 1.486 1.445zm0 6.933c.821 0 1.487-.647 1.487-1.444 0-.798-.666-1.445-1.487-1.445-.82 0-1.486.647-1.486 1.445 0 .797.665 1.444 1.486 1.444zM11 25.133c.821 0 1.486-.646 1.486-1.444 0-.798-.665-1.445-1.486-1.445s-1.486.647-1.486 1.445.665 1.444 1.486 1.444zm0-21.377c.821 0 1.486-.647 1.486-1.445S11.821.867 11 .867s-1.486.646-1.486 1.444c0 .798.665 1.445 1.486 1.445z"
+															id="ShapeIcon2"
+														/>
+													</g>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</svg>
+							<h4 class="font-bold text-lg dark:text-purple-100">Machine Learning</h4>
+							<p class="text-gray-500 text-base max-w-60">
+								Your Marketing tools will learn how to better convert and sell.
+							</p>
+							<a class="underline text-main dark:text-white font-medium" href="#">Learn more</a>
+						</div>
+					</div>
+					<div class="max-w-md py-10 lg:w-1/3">
+						<div class="flex flex-col items-center gap-2">
+							<svg
+								class="relative w-20 h-20"
+								viewBox="0 0 58 58"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+							>
+								<defs>
+									<linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1Icon3">
+										<stop stop-color="#32FBFC" offset="0%" />
+										<stop stop-color="#3214F2" offset="100%" />
+									</linearGradient>
+									<filter
+										x="-14%"
+										y="-10%"
+										width="128%"
+										height="128%"
+										filterUnits="objectBoundingBox"
+										id="filter-3Icon3"
+									>
+										<feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1" />
+										<feGaussianBlur
+											stdDeviation="2"
+											in="shadowOffsetOuter1"
+											result="shadowBlurOuter1"
+										/>
+										<feColorMatrix
+											values="0 0 0 0 0.031372549 0 0 0 0 0.149019608 0 0 0 0 0.658823529 0 0 0 0.15 0"
+											in="shadowBlurOuter1"
+										/>
+									</filter>
+									<path
+										d="M17.947 0h14.106c6.24 0 8.503.65 10.785 1.87a12.721 12.721 0 015.292 5.292C49.35 9.444 50 11.707 50 17.947v14.106c0 6.24-.65 8.503-1.87 10.785a12.721 12.721 0 01-5.292 5.292C40.556 49.35 38.293 50 32.053 50H17.947c-6.24 0-8.503-.65-10.785-1.87a12.721 12.721 0 01-5.292-5.292C.65 40.556 0 38.293 0 32.053V17.947c0-6.24.65-8.503 1.87-10.785A12.721 12.721 0 017.162 1.87C9.444.65 11.707 0 17.947 0z"
+										id="path-2Icon3"
+									/>
+								</defs>
+								<g
+									id="Page-1Icon3"
+									stroke="none"
+									stroke-width="1"
+									fill="none"
+									fill-rule="evenodd"
+								>
+									<g id="Desktop-HDIcon3" transform="translate(-1091 -1278)">
+										<g id="FeaturesIcon3" transform="translate(170 915)">
+											<g id="Group-9-Copy-2Icon3" transform="translate(800 365)">
+												<g id="Group-8Icon3" transform="translate(125)">
+													<g id="Rectangle-9Icon3">
+														<use fill="#000" filter="url(#filter-3Icon3)" xlink:href="#path-2Icon3" />
+														<use fill="url(#linearGradient-1Icon3)" xlink:href="#path-2Icon3" />
+													</g>
+													<g
+														id="smart-notificationsIcon3"
+														transform="translate(15 11)"
+														fill="#FFF"
+														fill-rule="nonzero"
+													>
+														<path
+															d="M12.519 3.243a6.808 6.808 0 00-.187 1.298h-8.44a2.595 2.595 0 00-2.595 2.594v12.973a2.595 2.595 0 002.595 2.595h12.973a2.595 2.595 0 002.594-2.595v-8.44c.445-.02.88-.084 1.298-.187v8.627A3.892 3.892 0 0116.865 24H3.892A3.892 3.892 0 010 20.108V7.135a3.892 3.892 0 013.892-3.892h8.627zm6.616 6.487a4.865 4.865 0 110-9.73 4.865 4.865 0 010 9.73z"
+															id="IconIcon3"
+														/>
+													</g>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</svg>
+							<h4 class="font-bold text-lg dark:text-purple-100">Smart Notifications</h4>
+							<p class="text-gray-500 text-base max-w-60">
+								Our smart notifications will notify you when users convert.
+							</p>
+							<a class="underline text-main dark:text-white font-medium" href="#">Learn more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="pricing" class="border-y">
+			<div class="container mx-auto py-14 md:py-28">
+				<div class="text-center">
+					<h2 class="text-xl md:text-2xl mb-2 tracking-wide text-purple-700">Our Pricing</h2>
+					<h3
+						class="max-w-2xl mx-auto px-10 text-4xl md:text-6xl font-extrabold text-main dark:text-white mb-10"
+					>
+						Simple, Transparent Pricing for Everyone
+					</h3>
+				</div>
+				<div
+					class="tracking-wide flex flex-col items-center md:flex-row justify-center gap-7 pt-10 dark:text-white"
+				>
+					<div
+						class="text-center flex flex-col items-center gap-5 border rounded-md shadow-sm hover:border-purple-300 hover:shadow-md hover:shadow-purple-200 duration-300 h-[410.4px]"
+					>
+						<h3
+							class="capitalize font-semibold text-xl dark:text-primary bg-purple-300 w-full rounded-tr-md rounded-tl-md border-b dark:border-none py-1"
+						>
+							basic <span class="font-normal">plan</span>
+						</h3>
+						<div class="flex flex-col items-center justify-center gap-3 px-3">
+							<h4 class="text-3xl font-extrabold">
+								<span class="font-semibold mr-1">$</span>48
+							</h4>
+							<p class="max-w-72 text-gray-500">
+								In our basic plan you can take advantage of all these following features:
+							</p>
+						</div>
+						<div>
+							<ul class="flex flex-col gap-3 text-main dark:text-white">
+								<li class="flex items-center gap-3">
+									<div class="text-purple-400 fill-current">
+										<svg
+											class="w-6 h-6 align-middle"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+											<polyline points="22 4 12 14.01 9 11.01"></polyline>
+										</svg>
+									</div>
+									<span class="capitalize text-lg">awesome feature</span>
+								</li>
+								<li class="flex items-center gap-3">
+									<div class="text-purple-400 fill-current">
+										<svg
+											class="w-6 h-6 align-middle"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+											<polyline points="22 4 12 14.01 9 11.01"></polyline>
+										</svg>
+									</div>
+									<span class="capitalize text-lg">another cool feature</span>
+								</li>
+								<li class="flex items-center gap-3">
+									<div class="text-purple-400 fill-current">
+										<svg
+											class="w-6 h-6 align-middle"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+											<polyline points="22 4 12 14.01 9 11.01"></polyline>
+										</svg>
+									</div>
+									<span class="capitalize text-lg">one more feature</span>
+								</li>
+							</ul>
+						</div>
+						<a
+							class="bg-black dark:bg-purple-300 text-white dark:text-primary py-4 px-6 rounded-xl uppercase mb-7 hover:bg-purple-300 hover:shadow-md hover:shadow-purple-200 dark:shadow-none hover:hover:scale-105 hover:text-purple-950 dark:hover:text-primary duration-300"
+							href="#"
+							>select this plan</a
+						>
+					</div>
+					<div
+						class="text-center flex flex-col items-center gap-5 border rounded-md shadow-md hover:border-teal-400 hover:shadow-teal-200 duration-300 h-[410.4px] md:h-[450px]"
+					>
+						<h3
+							class="capitalize font-semibold text-xl dark:text-primary md:text-2xl bg-teal-300 w-full rounded-tr-md rounded-tl-md border-b dark:border-none py-1"
+						>
+							pro <span class="font-normal">plan</span>
+						</h3>
+						<div class="flex flex-col items-center justify-center gap-3 px-3">
+							<h4 class="text-4xl font-extrabold">
+								<span class="font-semibold mr-1">$</span>78
+							</h4>
+							<p class="max-w-72 text-gray-500">
+								Our <span class="text-teal-500 font-semibold">most popular</span> package is the
+								Pro Plan which gives you access to the following:
+							</p>
+						</div>
+						<div>
+							<ul class="flex flex-col gap-3 text-main dark:text-white">
+								<li class="flex items-center gap-3">
+									<div class="text-teal-400 fill-current">
+										<svg
+											class="w-6 h-6 align-middle"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+											<polyline points="22 4 12 14.01 9 11.01"></polyline>
+										</svg>
+									</div>
+									<span class="capitalize text-lg">really cool features</span>
+								</li>
+								<li class="flex items-center gap-3">
+									<div class="text-teal-400 fill-current">
+										<svg
+											class="w-6 h-6 align-middle"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+											<polyline points="22 4 12 14.01 9 11.01"></polyline>
+										</svg>
+									</div>
+									<span class="capitalize text-lg">another cool feature</span>
+								</li>
+								<li class="flex items-center gap-3">
+									<div class="text-teal-400 fill-current">
+										<svg
+											class="w-6 h-6 align-middle"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+											<polyline points="22 4 12 14.01 9 11.01"></polyline>
+										</svg>
+									</div>
+									<span class="capitalize text-lg">one more feature</span>
+								</li>
+							</ul>
+						</div>
+						<a
+							class="bg-black dark:bg-teal-300 text-white dark:text-primary py-4 px-6 rounded-xl uppercase mb-7 hover:bg-teal-300 hover:shadow-md hover:shadow-teal-200 dark:shadow-none hover:hover:scale-105 hover:text-teal-950 dark:hover:text-primary duration-300"
+							href="#"
+							>select this plan</a
+						>
+					</div>
+					<div
+						class="text-center flex flex-col items-center gap-5 border rounded-md shadow-sm hover:border-purple-300 hover:shadow-md hover:shadow-purple-200 duration-300 h-[410.4px]"
+					>
+						<h3
+							class="capitalize font-semibold text-xl dark:text-primary bg-purple-300 w-full rounded-tr-md rounded-tl-md border-b dark:border-none py-1"
+						>
+							premium <span class="font-normal">plan</span>
+						</h3>
+						<div class="flex flex-col items-center justify-center gap-3 px-3">
+							<h4 class="text-3xl font-extrabold">
+								<span class="font-semibold mr-1">$</span>98
+							</h4>
+							<p class="max-w-72 text-gray-500">
+								With our premium plan you can take advantage of all the following features:
+							</p>
+						</div>
+						<div>
+							<ul class="flex flex-col gap-3 text-main dark:text-white">
+								<li class="flex items-center gap-3">
+									<div class="text-purple-400 fill-current">
+										<svg
+											class="w-6 h-6 align-middle"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+											<polyline points="22 4 12 14.01 9 11.01"></polyline>
+										</svg>
+									</div>
+									<span class="capitalize text-lg">totally tubular feature</span>
+								</li>
+								<li class="flex items-center gap-3">
+									<div class="text-purple-400 fill-current">
+										<svg
+											class="w-6 h-6 align-middle"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+											<polyline points="22 4 12 14.01 9 11.01"></polyline>
+										</svg>
+									</div>
+									<span class="capitalize text-lg">super cool feature</span>
+								</li>
+								<li class="flex items-center gap-3">
+									<div class="text-purple-400 fill-current">
+										<svg
+											class="w-6 h-6 align-middle"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+											<polyline points="22 4 12 14.01 9 11.01"></polyline>
+										</svg>
+									</div>
+									<span class="capitalize text-lg">one more feature</span>
+								</li>
+							</ul>
+						</div>
+						<a
+							class="bg-black dark:bg-purple-300 text-white dark:text-primary py-4 px-6 rounded-xl uppercase mb-7 hover:bg-purple-300 hover:shadow-md hover:shadow-purple-200 dark:shadow-none hover:hover:scale-105 hover:text-purple-950 dark:hover:text-primary duration-300"
+							href="#"
+							>select this plan</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="testimonials" class="border-b">
+			<div class="container mx-auto py-14 md:py-28">
+				<div class="text-center px-3">
+					<h2 class="text-xl md:text-2xl mb-2 tracking-wide text-purple-700">Our Customers</h2>
+					<h3
+						class="max-w-2xl mx-auto px-10 text-4xl md:text-6xl font-extrabold text-main dark:text-white mb-10"
+					>
+						Testimonials
+					</h3>
+					<p class="max-w-lg mx-auto text-lg tracking-wide text-gray-400">
+						Don't just take our word for it, read from our extensive list of case studies and
+						customer testimonials.
+					</p>
+				</div>
+				<div class="px-5">
+					<div class="relative w-full max-w-3xl mx-auto mt-10 overflow-hidden">
+						<!-- Review Container -->
+						<div id="reviews-slider" class="flex transition-transform duration-500 ease-out">
+							<!-- Review Item 1 -->
+							<div class="flex-shrink-0 w-full p-4">
+								<div
+									class="p-6 rounded-lg shadow-lg text-center border hover:border-purple-300 hover:shadow-md hover:shadow-purple-300 hover:bg-purple-50 dark:hover:bg-inherit duration-500"
+								>
+									<!-- Image Container -->
+									<div class="mx-auto w-24 h-24 rounded-full overflow-hidden mb-4">
+										<img
+											src="./images/man1.jpg"
+											alt="John Doe"
+											class="w-full h-full object-cover"
+										/>
+									</div>
+									<svg
+										class="w-10 h-10 mx-auto text-purple-300 fill-current"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 100 125"
+									>
+										<path
+											d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+										/>
+									</svg>
+									<p class="text-gray-700 dark:text-gray-300">
+										"Excellent service and great quality! Highly recommend."
+									</p>
+									<div class="mt-4">
+										<h3 class="text-lg font-bold text-main dark:text-white">John Doe</h3>
+										<p class="text-sm text-gray-500">CEO, Company A</p>
+									</div>
+								</div>
+							</div>
+							<!-- Review Item 2 -->
+							<div class="flex-shrink-0 w-full p-4">
+								<div
+									class="p-6 rounded-lg shadow-lg text-center border hover:border-purple-300 hover:shadow-md hover:shadow-purple-300 hover:bg-purple-50 dark:hover:bg-inherit duration-500"
+								>
+									<!-- Image Container -->
+									<div class="mx-auto w-24 h-24 rounded-full overflow-hidden mb-4">
+										<img
+											src="./images/man2.avif"
+											alt="Mike Smith"
+											class="w-full h-full object-cover"
+										/>
+									</div>
+									<svg
+										class="w-10 h-10 mx-auto text-purple-300 fill-current"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 100 125"
+									>
+										<path
+											d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+										/>
+									</svg>
+									<p class="text-gray-700 dark:text-gray-300">
+										"A wonderful experience from start to finish."
+									</p>
+									<div class="mt-4">
+										<h3 class="text-lg font-bold text-main dark:text-white">Mike Smith</h3>
+										<p class="text-sm text-gray-500">Marketing Head, Company B</p>
+									</div>
+								</div>
+							</div>
+							<!-- Review Item 3 -->
+							<div class="flex-shrink-0 w-full p-4">
+								<div
+									class="p-6 rounded-lg shadow-lg text-center border hover:border-purple-300 hover:shadow-md hover:shadow-purple-300 hover:bg-purple-50 dark:hover:bg-inherit duration-500"
+								>
+									<!-- Image Container -->
+									<div class="mx-auto w-24 h-24 rounded-full overflow-hidden mb-4">
+										<img
+											src="./images/man3.jpg"
+											alt="Alex Brown"
+											class="w-full h-full object-cover"
+										/>
+									</div>
+									<svg
+										class="w-10 h-10 mx-auto text-purple-300 fill-current"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 100 125"
+									>
+										<path
+											d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"
+										/>
+									</svg>
+									<p class="text-gray-700 dark:text-gray-300">
+										"Highly professional and excellent customer service."
+									</p>
+									<div class="mt-4">
+										<h3 class="text-lg font-bold text-main dark:text-white">Alex Brown</h3>
+										<p class="text-sm text-gray-500">CTO, Company C</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Navigation Buttons -->
+						<button
+							type="button"
+							id="prev-btn"
+							class="absolute z-30 top-1/2 left-0 transform -translate-y-1/2 bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700"
+						>
+							&#10094;
+						</button>
+						<button
+							type="button"
+							id="next-btn"
+							class="absolute z-30 top-1/2 right-0 transform -translate-y-1/2 bg-purple-600 text-white p-3 rounded-full hover:bg-purple-700"
+						>
+							&#10095;
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container mx-auto p-5 lg:p-10">
+				<div class="flex flex-col md:flex-row gap-16 justify-center items-center">
+					<div class="flex flex-col items-center text-center gap-4">
+						<div class="w-16 h-16">
+							<img class="w-full h-full" src="./images/logo.png" alt="landmark" />
+						</div>
+						<p class="text-sm text-gray-500 dark:text-gray-300 max-w-72 md:max-w-60">
+							Crafting the next-level of user experience and engagement.
+						</p>
+					</div>
+					<div class="flex gap-6 justify-center sm:gap-12 flex-wrap">
+						<ul class="flex flex-col gap-2 w-32">
+							<li
+								class="text-purple-800 dark:text-purple-500 text-base font-bold tracking-wide uppercase mb-2"
+							>
+								Product
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-gray-500 dark:text-gray-300 text-sm tracking-tight hover:text-teal-500 dark:hover:text-teal-300 duration-200"
+									>Features</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-gray-500 dark:text-gray-300 text-sm tracking-tight hover:text-teal-500 dark:hover:text-teal-300 duration-200"
+									>Integrations</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-gray-500 dark:text-gray-300 text-sm tracking-tight hover:text-teal-500 dark:hover:text-teal-300 duration-200"
+									>Pricing</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-gray-500 dark:text-gray-300 text-sm tracking-tight hover:text-teal-500 dark:hover:text-teal-300 duration-200"
+									>FAQ</a
+								>
+							</li>
+						</ul>
+						<ul class="flex flex-col gap-2 w-32">
+							<li
+								class="text-purple-800 dark:text-purple-500 text-base font-bold tracking-wide uppercase mb-2"
+							>
+								Company
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-gray-500 dark:text-gray-300 text-sm tracking-tight hover:text-teal-500 dark:hover:text-teal-300 duration-200"
+									>Privacy</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-gray-500 dark:text-gray-300 text-sm tracking-tight hover:text-teal-500 dark:hover:text-teal-300 duration-200"
+									>Terms of Service</a
+								>
+							</li>
+						</ul>
+						<ul class="flex flex-col gap-2 w-32">
+							<li
+								class="text-purple-800 dark:text-purple-500 text-base font-bold tracking-wide uppercase mb-2"
+							>
+								TailwindCSS
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-gray-500 dark:text-gray-300 text-sm tracking-tight hover:text-teal-500 dark:hover:text-teal-300 duration-200"
+									>Tailwind Components</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-gray-500 dark:text-gray-300 text-sm tracking-tight hover:text-teal-500 dark:hover:text-teal-300 duration-200"
+									>Tailwind Templates</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-gray-500 dark:text-gray-300 text-sm tracking-tight hover:text-teal-500 dark:hover:text-teal-300 duration-200"
+									>Tails</a
+								>
+							</li>
+						</ul>
+						<ul class="flex flex-col gap-2 w-32">
+							<li
+								class="text-purple-800 dark:text-purple-500 text-base font-bold tracking-wide uppercase mb-2"
+							>
+								follow us
+							</li>
+							<li class="flex gap-1">
+								<a
+									title="Facebook"
+									class="flex items-center mr-6 text-gray-400 no-underline hover:text-teal-500 dark:hover:text-teal-300"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="#"
+								>
+									<svg
+										viewBox="0 0 24 24"
+										class="w-5 h-5 fill-current"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z"
+										/>
+									</svg>
+								</a>
+								<a
+									title="X"
+									class="flex items-center mr-6 text-gray-400 no-underline hover:text-teal-500 dark:hover:text-teal-300"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="#"
+								>
+									<svg
+										viewBox="0 0 24 24"
+										class="w-5 h-5 fill-current"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"
+										/>
+									</svg>
+								</a>
+								<a
+									title="Github"
+									class="flex items-center text-gray-400 no-underline hover:text-teal-500 dark:hover:text-teal-300"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="#"
+								>
+									<svg
+										viewBox="0 0 24 24"
+										class="w-5 h-5 fill-current"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+										/>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copyrights text-center text-sm text-gray-400 mt-10 border-t p-6">
+				<p>© 2024 <span class="text-teal-500">Eman Negm</span>. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<button
+			id="scrollUpButton"
+			type="button"
+			title="scroll-up"
+			class="fixed bottom-8 right-11 md:right-8 z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+		>
+			<i class="fa-solid fa-circle-arrow-up text-3xl md:text-4xl text-purple-600"></i>
+		</button>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
