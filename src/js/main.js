@@ -14,58 +14,45 @@ const nextBtn = document.getElementById("next-btn");
 const scrollUpButton = document.getElementById("scrollUpButton");
 
 //navbar
-function changeNavbarBackground() {
-	if (window.scrollY > 50) {
-		if (document.documentElement.classList.contains("dark")) {
-			// Dark mode:
-			navbar.classList.add("dark:bg-primary", "shadow-lg");
-			navbar.classList.remove("dark:bg-transparent");
-		} else {
-			// Light mode:
-			navbar.classList.add("bg-white", "shadow-lg");
-			navbar.classList.remove("bg-transparent", "text-white");
-			navbarToggle.classList.remove("text-purple-300");
-			modeToggle.classList.remove("text-purple-300");
-		}
-	} else {
-		if (document.documentElement.classList.contains("dark")) {
-			// Dark mode:
-			navbar.classList.remove("dark:bg-primary", "shadow-lg");
-			navbar.classList.add("dark:bg-transparent");
-		} else {
-			// Light mode:
-			navbar.classList.add("bg-transparent", "text-white");
-			navbar.classList.remove("bg-white", "shadow-lg");
-			navbarToggle.classList.add("text-purple-300");
-			modeToggle.classList.add("text-purple-300");
-		}
-	}
-}
-
-window.addEventListener("scroll", changeNavbarBackground);
-modeIcon.addEventListener("change", () => {
-	changeNavbarBackground();
-});
-
 navbarToggle.addEventListener("click", () => {
 	navbarMenu.classList.toggle("hidden");
 });
 
-//Mode
+function toggleDarkMode() {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("dark-mode", isDark);
+
+    modeIcon.classList.toggle("fa-sun", isDark);
+    modeIcon.classList.toggle("fa-moon", !isDark);
+
+    changeNavbarBackground();
+}
+
+function changeNavbarBackground() {
+    const isDarkMode = document.documentElement.classList.contains("dark");
+    const scrolled = window.scrollY > 50;
+
+    navbar.classList.toggle(isDarkMode ? "dark:bg-primary" : "bg-white", scrolled);
+    navbar.classList.toggle("shadow-lg", scrolled);
+    navbar.classList.toggle(isDarkMode ? "dark:bg-transparent" : "bg-transparent", !scrolled);
+
+    if (!isDarkMode) {
+        navbar.classList.toggle("text-white", !scrolled);
+        navbarToggle.classList.toggle("text-purple-300", !scrolled);
+        modeToggle.classList.toggle("text-purple-300", !scrolled);
+    }
+}
+
 const isDarkMode = localStorage.getItem("dark-mode") === "true";
 
 document.documentElement.classList.toggle("dark", isDarkMode);
 modeIcon.classList.toggle("fa-sun", isDarkMode);
 modeIcon.classList.toggle("fa-moon", !isDarkMode);
 
-modeToggle.addEventListener("click", () => {
-	document.documentElement.classList.toggle("dark");
-	const isDark = document.documentElement.classList.contains("dark");
-	localStorage.setItem("dark-mode", isDark);
+window.addEventListener("scroll", changeNavbarBackground);
+modeToggle.addEventListener("click", toggleDarkMode);
 
-	modeIcon.classList.toggle("fa-sun", isDark);
-	modeIcon.classList.toggle("fa-moon", !isDark);
-});
+changeNavbarBackground();
 
 //typewriter effect
 let index = 0;
